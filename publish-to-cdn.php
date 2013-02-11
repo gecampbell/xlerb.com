@@ -60,8 +60,6 @@ echo "Creating static website...\n";
 $resp = $container->CreateStaticSite('index.html');
 $resp = $container->StaticSiteErrorPage('error.html');
 
+printf("Status %s\n", $resp->HttpStatus());
 printf("CDN URL:    %s\n", $container->CDNUrl());
 printf("Public URL: %s\n", $container->PublicURL());
-
-
-printf("Status %s\n", $resp->HttpStatus());
