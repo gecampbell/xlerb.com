@@ -2,11 +2,25 @@
 require_once('rackspace.php');
 
 // push a file
-function pushfile($container, $filename, $mimetype) {
+function pushfile($container, $filename) {
+	if (substr($filename, -3) == 'css')
+		$mime = 'text/css';
+	elseif (substr($filename, -3) == 'png')
+		$mime = 'image/png';
+	elseif (substr($filename, -4) == 'html')
+		$mime = 'text/html';
+	elseif (substr($filename, -3) == 'txt')
+		$mime = 'text/plain';
+	elseif (substr($filename, -3) == 'ico')
+		$mime = 'image/x-icon';
+	elseif (substr($filename, -2) == 'js')
+		$mime = 'text/javascript';
+	else
+		die("Unrecognized file type [$filename]\n");
 	$resp = $container->DataObject()->Create(
-		array('name'=>$filename, 'content_type'=>$mimetype), $filename);
+		array('name'=>$filename, 'content_type'=>$mime), $filename);
 	printf("File: %s Type: %s Status: %s\n", 
-		$filename, $mimetype, $resp->HttpStatus());
+		$filename, $mime, $resp->HttpStatus());
 }
 
 define('AUTHURL', 'https://identity.api.rackspacecloud.com/v2.0/');
@@ -29,7 +43,7 @@ $container->Create(array('name'=>'xlerb.com'));
 
 // upload the files
 pushfile($container, 'robots.txt', 'text/plain');
-foreach(glob('*.html') as $filename)
+foreach(glob('*.*') as $filename)
 	pushfile($container, $filename, 'text/html');
 
 // publish directories
@@ -40,15 +54,7 @@ foreach($DIRLIST as $dirname) {
 	while(FALSE !== ($f = readdir($dir))) {
 		if(substr($f,0,1) != '.') {
 			$path = "$dirname/$f";
-			if (substr($f, -3) == 'css')
-				$mime = 'text/css';
-			elseif (substr($f, -3) == 'png')
-				$mime = 'image/png';
-			elseif (substr($f, -2) == 'js')
-				$mime = 'text/javascript';
-			else
-				die("Unrecognized file type [$f]\n");
-			pushfile($container, $path, $mime);
+			pushfile($container, $path);
 		}
 	}
 }
