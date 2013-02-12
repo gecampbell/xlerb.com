@@ -28,6 +28,12 @@ define('USERNAME', $_ENV['OS_USERNAME']);
 define('TENANT', $_ENV['OS_TENANT_NAME']);
 define('APIKEY', $_ENV['NOVA_API_KEY']);
 
+define('DOCROOT', './docroot');
+
+chdir(DOCROOT);
+
+printf("Connecting using [%s]\n", USERNAME);
+
 // establish our credentials
 $connection = new OpenCloud\Rackspace(AUTHURL,
 	array( 'username' => USERNAME,
@@ -67,5 +73,4 @@ $resp = $container->CreateStaticSite('index.html');
 $resp = $container->StaticSiteErrorPage('error.html');
 
 printf("Status %s\n", $resp->HttpStatus());
-printf("CDN URL:    %s\n", $container->CDNUrl());
 printf("Public URL: %s\n", $container->PublicURL());
