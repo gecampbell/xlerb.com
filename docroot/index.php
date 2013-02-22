@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+// Copyright 2013, Glen Campbell.
+header('Cache-Control: max-age=300');
+?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
