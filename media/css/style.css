@@ -6,21 +6,22 @@ width: 980px;
 margin: 0 auto 40px; auto;
 }
 header {
-padding: 1em 0 0 0;
+padding: 0;
 margin: 0;
-background: LightGreen;
 color: black;
 margin-bottom: 2em;
 }
 header h1 {
-padding-left: 5px;
-font-size: 32pt;
-letter-spacing: -2px;
+color: gray;
+font-size: 64pt;
+letter-spacing: -4px;
+line-height: 80%;
+margin: 0;
+padding: 20px 0 0 0;
 }
 article {
-font-family: 'Libre Baskerville', times new roman, times, serif;
-font-size: 14pt;
 line-height: 180%;
+width: 40em;
 }
 footer {
 position: absolute;
@@ -35,9 +36,8 @@ nav {
 font-size: 11pt;
 font-weight: bold;
 padding: 4px 0 4px 0;
-border-top: 1px black solid;
-border-bottom: 1px black solid;
-background: Beige;
+border-top: 1px silver solid;
+border-bottom: 1px silver solid;
 }
 nav a {
 color: black;
@@ -57,4 +57,12 @@ list-style-type: none;
 margin-left: 0;
 padding-left: 0;
 line-height: 150%;
+}
+#content {
+font-family: 'Libre Baskerville', times new roman, times, serif;
+font-size: 13pt;
+padding-left: 2em;
+}
+#content h1 {
+color: black;
 }
