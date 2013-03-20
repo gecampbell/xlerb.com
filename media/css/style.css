@@ -1,0 +1,27 @@
+/* (c)2013 Glen Campbell */
+body {
+background: white;
+font-family: helvetica, arial, sans-serif;
+width: 980px;
+margin: 0 auto 40px; auto;
+}
+header {
+padding: 2em 0 0 0;
+color: black;
+border-bottom: 1px black solid;
+margin-bottom: 2em;
+}
+article {
+font-family: times new roman, times, serif;
+font-size: 14pt;
+line-height: 150%;
+}
+footer {
+position: absolute;
+bottom: 0;
+height: 40px;
+border-top: 1px #ddd solid;
+padding-top: 4px;
+font-size: smaller;
+color: gray;
+}
