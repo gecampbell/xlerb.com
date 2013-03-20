@@ -1,3 +1,7 @@
+title: Résumé
+slug: resume
+---
+
 I'm an experienced manager, software engineer, speaker, and architect of very large-scale computer systems. In the past, I've had a special emphasis on the LAMP (Linux, Apache, MySQL, and PHP) websites, but these days I'm mostly working with utility-based compute systems (aka "cloud computing"). However, even though some consider the term  "old-fashioned" these days, I tend to think of myself as a <a href="http://en.wikipedia.org/wiki/Systems_analysis">systems analyst</a>; that is, my primary skill is the ability to visualize and solve problems related to integrating large-scale systems such as websites, service-oriented network architectures, data warehouses, and other software constructs. I have a proven track record of launching large-scale software projects; I was the architect and lead developer for the first service-oriented architecture (SOA) website at Yahoo!, and I've launched numerous other large-scale sites and products since then.
 
 In the past, I've been a consultant and architect of data warehouses and very large extract, transform, and load (ETL) processes.

@@ -1,7 +1,7 @@
 /* (c)2013 Glen Campbell */
 body {
 background: white;
-font-family: helvetica, arial, sans-serif;
+font-family: Galdeano, Helvetica, Arial, sans-serif;
 width: 980px;
 margin: 0 auto 40px; auto;
 }
@@ -18,9 +18,9 @@ font-size: 32pt;
 letter-spacing: -2px;
 }
 article {
-font-family: times new roman, times, serif;
+font-family: 'Libre Baskerville', times new roman, times, serif;
 font-size: 14pt;
-line-height: 150%;
+line-height: 180%;
 }
 footer {
 position: absolute;
