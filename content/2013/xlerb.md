@@ -1,12 +1,20 @@
-title: What's an Xlerb?
+title: What's an xlerb?
 category: blog
-date: 2013-03-19 10:58:00
+datetime: 2013-03-20 10:58:00
 ---
 If you have somehow managed to find this site, you are either curious
-about the name Xlerb, or you already know what it means. If you already
+about the name `xlerb`, or you already know what it means. If you already
 know what it means, then there's probably not much point in reading
 further.
 
-Xlerb is a "word that doesn't exist in the dictionary." It was coined by
+`xlerb` is a "word that doesn't exist in the dictionary." It was coined by
 Leo Brodie in the seminal programming tome
 [Starting Forth](http://www.forth.com/starting-forth/).
+Forth, if you're not aware, is made up of "words" that decompose into
+smaller words, which ultimately end up written in assembler.
+Forth maintains a dictionary of words, and scans it for each word in
+its input stream.
+
+`xlerb` is not a word.
+
+So now you know the rest of the story.
