@@ -1,0 +1,5 @@
+title: RSS
+slug: rss
+type: rss
+comment: See templates/rss.xml
+---
