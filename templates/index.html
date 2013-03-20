@@ -1,0 +1,11 @@
+{# home/index page template - lists articles #}
+
+{% extends "base.html" %}
+
+{% block content %}
+<ol id="index">
+{% for item in site.categories[blog]|sort(attribute='datetime')|reverse %}
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+</ol>
+{% endblock %}
