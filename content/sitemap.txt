@@ -1,0 +1,5 @@
+title: Sitemap
+slug: sitemap
+type: sitemap
+comment: See templates/sitemap.xml
+---
