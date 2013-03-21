@@ -9,7 +9,7 @@
         <language>en-us</language>
         <pubDate>{{ site.datetime.strftime(datefmt) }}</pubDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-        {% for item in site.categories[page.blog]|sort(attribute='datetime')|reverse %}
+        {% for item in site.categories['blog']|sort(attribute='datetime')|reverse %}
             {% if loop.index0 < 17 %}
                 <item>
                     <title>{{item.title}}</title>
