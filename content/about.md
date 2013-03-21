@@ -1,6 +1,7 @@
 title: About Me
 slug: about
 ---
+![Me](/img/me.jpg "This is me")
 I was born in 1961 the fetid swamps of southeast Texas, in the city
 of Beaumont, near the Big Thicket, in what is locally referred to
 as The Golden Triangle (the three points of which are Beaumont,

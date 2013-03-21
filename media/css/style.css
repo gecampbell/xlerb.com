@@ -1,23 +1,12 @@
 /* (c)2013 Glen Campbell */
 html {
-position: relative;
-min-height: 100%;
 }
 body {
 background: white;
 font-family: Galdeano, Helvetica, Arial, sans-serif;
-width: 42em;
 margin: 0 auto 80px auto;
 }
 footer {
-position: absolute;
-bottom: 0;
-/*width: 42em; /* must be the same as body.width */
-height: 40px; /* must be <= body.margin.bottom */
-border-top: 1px silver solid;
-padding: 4px;
-font-size: smaller;
-color: gray;
 }
 footer a, footer a:hover, footer a:visited {
 color: gray;
@@ -36,9 +25,9 @@ header h1 {
 color: gray;
 font-size: 64pt;
 letter-spacing: -4px;
-line-height: 80%;
 margin: 0;
 padding: 20px 0 0 0;
+line-height: 80%;
 }
 header h1 a, header h1 a:hover, header h1 a:visited {
 color: gray;
@@ -73,12 +62,10 @@ ol#index {
 list-style-type: none;
 margin-left: 0;
 padding-left: 0;
-line-height: 150%;
 }
 #content {
 font-family: 'Libre Baskerville', times new roman, times, serif;
 font-size: 13pt;
-line-height: 180%;
 }
 #content h1 {
 color: black;
@@ -96,4 +83,7 @@ font-family: 'Source Code pro', courier new, courier, fixed;
 .muted {
 color: gray;
 font-size: 10pt;
+}
+p {
+margin: 0 0 1em 0;
 }

@@ -1,54 +1,50 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>{{ site.title }}
     {% if site.title != page.title %}
     - {{ page.title }}
     {% endif %}
     </title>
-    <link
-    	href='http://fonts.googleapis.com/css?family=Libre+Baskerville'
-    	rel='stylesheet'
-    	type='text/css'>
-    <link
-    	href='http://fonts.googleapis.com/css?family=Galdeano'
-    	rel='stylesheet'
-    	type='text/css'>
-	<link
-		href='http://fonts.googleapis.com/css?family=Source+Code+Pro'
-		rel='stylesheet'
-		type='text/css'>
-	<link
-    	href="/rss.xml"
-    	rel="alternate"
-    	type="application/rss+xml">
     <style>
-    @import url('/css/style.css');
+    @import url('http://fonts.googleapis.com/css?family=Libre+Baskerville');
+    @import url('http://fonts.googleapis.com/css?family=Galdeano');
+    @import url('http://fonts.googleapis.com/css?family=Source+Code+Pro');
+    @import url('/css/bootstrap.min.css');
+    @import url('/css/xlerb.css');
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/rss.xml" rel="alternate" type="application/rss+xml">
 </head>
 <body>
+<div id="wrap">
+	<div class="container">
     <header>
         <h1><a href="/">{{ site.title }}</a></h1>
         <nav>
-            <ul>
+            <ul class="inline">
             <li><a href="/about.html">About</a></li>
             <li><a href="/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-	<div id="content">
     {% block content %}
     {% endblock %}
     </div>
+    <div id="push"></div>
+</div>
 
     <footer>
+    <div class="container">
     	&copy;2013
     	<a href="http://glen-campbell.com" title="Me">Glen Campbell</a>
     	&bull;
     	<a href="/tos.html">Terms of Service</a>
+    	&bull;
+    	<a href="/colophon.html">Colophon</a>
+    </div>
     </footer>
-
 </body>
 </html>
 <script type="text/javascript">
