@@ -72,4 +72,14 @@ In 2010, we moved back to Texas when I took a job with Rackspace
 in San Antonio. I currently lead a team in the the Developer Relations
 Group.
 
-Glen Campbell, San Antonio, Texas
+<address>
+*Glen Campbell*<br>
+San Antonio, Texas
+</address>
+
+<dl class="dl-horizontal">
+<dt>Twitter</dt><dd><a href="http://twitter.com/glenc">@glenc</a></dd>
+<dt>Email</dt><dd><a href="mailto:glen+x1@xlerb.com">glen@xlerb.com</a></dd>
+<dt>Telephone</dt><dd>+1 (210) 446-9990</dd>
+<dt>Ham Radio</dt><dd>K6GEC</dd>
+</dl>
