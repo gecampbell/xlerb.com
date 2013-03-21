@@ -11,7 +11,5 @@ visit here may constitute a felony under the Computer Fraud and Abuse Act.
 You are not authorized to view these Terms of Service, and viewing them
 may constitute a felony as well.
 
-<p class="muted">
 The opinions and information on this site are my own and do not reflect the
 official position of my employer or any other entity.
-</p>
