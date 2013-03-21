@@ -5,7 +5,7 @@ generator written in [Python](http://python.org) and using the
 [Markdown](http://daringfireball.net/projects/markdown/) plain-text
 markup language.
 
-I'm a bit fan of great typography, so I'm using three of the
+I'm a big fan of great typography, so I'm using three of the
 [Google](http://www.google.com) web fonts:
 
 * [Libre Baskerville](http://www.google.com/webfonts/specimen/Libre+Baskerville)
