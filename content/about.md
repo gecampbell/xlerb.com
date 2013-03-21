@@ -73,8 +73,3 @@ in San Antonio. I currently lead a team in the the Developer Relations
 Group.
 
 Glen Campbell, San Antonio, Texas
-
-<p class="muted">
-The opinions and information on this site are my own and do not reflect the
-official position of my employer or any other entity.
-</p>
