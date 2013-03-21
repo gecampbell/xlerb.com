@@ -1,2 +1,4 @@
 # custom 404 handler
 ErrorDocument 404 /404.html
+# set expires headers
+ExpiresDefault "access plus 1 hours"
