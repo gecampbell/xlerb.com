@@ -1,4 +1,4 @@
-title: Résumé
+title: Glen Campbell
 slug: resume
 ---
 
