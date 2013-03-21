@@ -1,6 +1,7 @@
 title: Working with Wok
 datetime: 2013-03-21 07:45:00
-category: blog
+category: articles
+tags: [wok, python, markdown, static]
 ---
 This site is built using the [Wok](http://wok.mythmon.com) static website
 generator. The source for it is mostly plain text files in

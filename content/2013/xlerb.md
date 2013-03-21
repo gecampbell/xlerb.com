@@ -1,5 +1,5 @@
 title: What's an xlerb?
-category: blog
+category: articles
 datetime: 2013-03-20 10:58:00
 tags: [xlerb, forth, Leo Brodie]
 ---
