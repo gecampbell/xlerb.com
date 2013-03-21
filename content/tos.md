@@ -1,6 +1,5 @@
 title: Terms of Service
 slug: tos
-datetime: 2013-01-01 00:00:00
 ---
 The contents of this site are Copyright &copy;2005-2013 Glen Campbell.
 All rights reserved.

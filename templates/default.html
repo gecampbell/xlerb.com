@@ -5,5 +5,7 @@
     <article>
         {{ page.content }}
     </article>
+    {% if page.datetime %}
     <time datetime="{{ page.datetime }}">{{ page.date }}</time>
+    {% endif %}
 {% endblock %}

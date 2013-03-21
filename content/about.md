@@ -1,6 +1,5 @@
 title: About Me
 slug: about
-datetime: 1999-01-09 09:14:00
 ---
 I was born in 1961 the fetid swamps of southeast Texas, in the city
 of Beaumont, near the Big Thicket, in what is locally referred to

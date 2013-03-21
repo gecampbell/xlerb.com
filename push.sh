@@ -12,4 +12,4 @@ if [[ ! -d $OUTPUT ]]; then
 	exit;
 fi
 
-rsync -aprv --delete $OUTPUT/* $1
+rsync -aprv --delete $OUTPUT/.htaccess $OUTPUT/* $1
