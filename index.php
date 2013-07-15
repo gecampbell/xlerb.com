@@ -10,6 +10,7 @@ margin: 5% 20%;
 font-family: 'Fauna One', 'Times New Roman', times, helvetica, sans-serif;
 font-size: 12pt;
 line-height: 1.8em;
+background: #eee;
 }
 h1 {
 width: 80%;
@@ -41,11 +42,13 @@ text-decoration: none;
 }
 a:hover {
 color: black;
-text-decoration: underline;
 }
 span.desc {
 display: none;
 padding-left: 1em;
+text-transform: lowercase;
+font-family: helvetica, arial, sans-serif;
+font-size: 10pt;
 }
 li:hover span.desc {
 display: inline;
@@ -73,6 +76,9 @@ color: gray;
   <ul>
     <li>+1 (210) 446-9990
     <span class="desc">You can call me on this. It's my phone number.</span>
+    </li>
+    <li><a href='m&#97;i&#108;to&#58;gle&#37;&#54;E&#64;x%6Cerb%2Eco&#109;'>glen&#64;xlerb&#46;&#99;om</a>
+    <span class="desc">Please don't send me spam.</spam>
     </li>
     <li><a href="http://twitter.com/glenc" title="Twitter">Twitter</a>
     <span class="desc">Things I say in 140 characters or less.</span>
@@ -102,3 +108,13 @@ color: gray;
   </ul>
 </body>
 </html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38736191-5', 'xlerb.com');
+  ga('send', 'pageview');
+
+</script>
