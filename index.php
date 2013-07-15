@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>xlerb.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <style>
 body {
@@ -14,8 +15,8 @@ h1 {
 width: 80%;
 text-align: right;
 color: silver;
-font-size: 100px;
-line-hight: 100px;
+font-size: 48pt;
+line-height: 48pt;
 position: absolute;
 left: 0;
 bottom: 0;
@@ -50,6 +51,16 @@ li:hover span.desc {
 display: inline;
 color: gray;
 }
+@media screen and (max-device-width: 480px){
+    body {
+    margin: 5px;
+    }
+    h1 {
+    width: 100%;
+    right: 10px;
+    }
+}
+
 </style>
 </head>
 <body>
