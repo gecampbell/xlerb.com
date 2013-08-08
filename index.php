@@ -54,6 +54,10 @@ li:hover span.desc {
 display: inline;
 color: gray;
 }
+hr {
+margin-top: 1em;
+border-top: 1px #ccc dotted;
+}
 @media screen and (max-device-width: 480px){
     body {
     margin: 5px;
@@ -63,7 +67,6 @@ color: gray;
     right: 10px;
     }
 }
-
 </style>
 </head>
 <body>
@@ -73,6 +76,7 @@ color: gray;
   18211 Apache Springs Dr.<br>
   San Antonio, Texas 78259-3606
   </address>
+  <hr>
   <ul>
     <li>+1 (210) 446-9990
     <span class="desc">You can call me on this. It's my phone number.</span>
@@ -105,6 +109,11 @@ color: gray;
     ?>
     </span>
     </li>
+    <hr>
+	<p>Subscribe to my mailing list</p>
+    <form action="/subscribe.php" method="post">
+    	<input type="text" name="email"></input>
+    </form>
   </ul>
 </body>
 </html>
