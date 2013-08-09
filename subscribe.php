@@ -34,6 +34,11 @@ Glen
 
 ENDWELCOME;
 
+$NEW_SUBSCRIBER_MESSAGE = <<<ENDNEWSUBSCRIBER
+New subscriber to chat@xlerb.info:
+    %s
+ENDNEWSUBSCRIBER;
+
 // generate hash from email
 function hashit($email) {
 	global $CONF;
@@ -42,6 +47,26 @@ function hashit($email) {
 // generate random shit
 function fuzz() {
 	return sha1( microtime() );
+}
+// send a simple message
+function send_simple_message($email, $subj, $msg) {
+	global $CONF;
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+	curl_setopt($ch, CURLOPT_USERPWD, 'api:'.$CONF['apikey']);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+	curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'] . 
+		'/xlerb.info/messages');
+	curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+		'from' => 'Xlerb <no-reply@xlerb.info>',
+		'to' => $email,
+		'subject' => $subj,
+		'text' => $msg));
+	$result = curl_exec($ch);
+	if ($result === FALSE)
+		error_log(sprintf('Error sending message [%s] to [%s]', $subj, $email));
+	curl_close($ch);
 }
 
 // validate request method
@@ -52,11 +77,10 @@ case 'POST':
 		die("Invalid request");
 	$email_message = sprintf($CONFIRMATION_MESSAGE, 
 		$_POST['email'], hashit($_POST['email']));
-	mail(
+	send_simple_message(
 		$_POST['email'],
 		'Confirm mailing list subscription',
-		$email_message,
-		'From: glen@xlerb.com'
+		$email_message
 	);
 	header('Location: '.$CONF['domain'].'?SUB1='.fuzz());
 	exit;
@@ -83,11 +107,15 @@ case 'GET':
 			header('Location: '.$CONF['domain'].'?SUBERR='.fuzz());
 		}
 		else {
-			mail(
+			send_simple_message(
 				$_GET['email'],
 				'Welcome to chat@xlerb.info',
-				$WELCOME_MESSAGE,
-				'From: glen@xlerb.com'
+				$WELCOME_MESSAGE
+			);
+			send_simple_message(
+				'glen@xlerb.com',
+				'New subscriber',
+				sprintf($NEW_SUBSCRIBER_MESSAGE, $_GET['email'])
 			);
 			header('Location: '.$CONF['domain'].'?SUB2='.fuzz());
 		}
