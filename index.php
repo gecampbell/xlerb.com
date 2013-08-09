@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+if (isset($_GET['SUB1']))
+	$msg = 'Check your email to confirm your mailing list subscription';
+elseif (isset($_GET['SUB2']))
+	$msg = 'Congratulations, your subscription has been confirmed';
+elseif (isset($_GET['SUBERR']))
+	$msg = 'Subscription error';
+?><!DOCTYPE html>
 <html>
 <head>
 <title>xlerb.com</title>
@@ -43,6 +50,12 @@ text-decoration: none;
 a:hover {
 color: black;
 }
+message {
+color: red;
+margin-top: 1em;
+margin-bottom: 3em;
+text-align: center;
+}
 span.desc {
 display: none;
 padding-left: 1em;
@@ -76,6 +89,10 @@ border-top: 1px #ccc dotted;
   18211 Apache Springs Dr.<br>
   San Antonio, Texas 78259-3606
   </address>
+  <?php
+  	if (isset($msg))
+  		echo "\n<message>$msg</message>\n";
+  ?>
   <hr>
   <ul>
     <li>+1 (210) 446-9990
@@ -112,7 +129,8 @@ border-top: 1px #ccc dotted;
     <hr>
 	<p>Subscribe to my mailing list</p>
     <form action="/subscribe.php" method="post">
-    	<input type="text" name="email"></input>
+    	<input type="text" name="email" size="40"></input>
+    	<input type="submit" value="Subscribe">
     </form>
   </ul>
 </body>
