@@ -56,10 +56,10 @@ function send_simple_message($email, $subj, $msg) {
 	curl_setopt($ch, CURLOPT_USERPWD, 'api:'.$CONF['apikey']);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-	curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'] . 
+	curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'] .
 		'/xlerb.info/messages');
 	curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-		'from' => 'Xlerb <no-reply@xlerb.info>',
+		'from' => 'Xlerb <no-reply@listserv.co>',
 		'to' => $email,
 		'subject' => $subj,
 		'text' => $msg));
@@ -75,7 +75,7 @@ switch(strtoupper($_SERVER['REQUEST_METHOD'])) {
 case 'POST':
 	if (!isset($_POST['email']))
 		die("Invalid request");
-	$email_message = sprintf($CONFIRMATION_MESSAGE, 
+	$email_message = sprintf($CONFIRMATION_MESSAGE,
 		$_POST['email'], hashit($_POST['email']));
 	send_simple_message(
 		$_POST['email'],
@@ -93,7 +93,7 @@ case 'GET':
 		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($ch, CURLOPT_USERPWD, 'api:'.$CONF['apikey']);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'].'/lists/'.	
+		curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'].'/lists/'.
 		$CONF['list'].'/members');
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 		curl_setopt($ch, CURLOPT_POSTFIELDS, array(
@@ -109,7 +109,7 @@ case 'GET':
 		else {
 			send_simple_message(
 				$_GET['email'],
-				'Welcome to chat@xlerb.info',
+				'Welcome to chat@listserv.co',
 				$WELCOME_MESSAGE
 			);
 			send_simple_message(
