@@ -23,19 +23,19 @@ ENDCONFIRM;
 $WELCOME_MESSAGE = <<<ENDWELCOME
 Welcome!
 
-You've successfully joined the chat@xlerb.info mailing list.  You
+You've successfully joined the chat@listserv.co mailing list.  You
 can subscribe at any time by clicking the link at the bottom of any
 of the list messages.
 
 To send a message to other list members, simply direct it to
-chat@xlerb.info.
+chat@listserv.co.
 
 Glen
 
 ENDWELCOME;
 
 $NEW_SUBSCRIBER_MESSAGE = <<<ENDNEWSUBSCRIBER
-New subscriber to chat@xlerb.info:
+New subscriber to chat@listserv.co:
     %s
 ENDNEWSUBSCRIBER;
 
@@ -57,7 +57,7 @@ function send_simple_message($email, $subj, $msg) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	curl_setopt($ch, CURLOPT_URL, $CONF['endpoint'] .
-		'/xlerb.info/messages');
+		'/listserv.co/messages');
 	curl_setopt($ch, CURLOPT_POSTFIELDS, array(
 		'from' => 'Xlerb <no-reply@listserv.co>',
 		'to' => $email,
